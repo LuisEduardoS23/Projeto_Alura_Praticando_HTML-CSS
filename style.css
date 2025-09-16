@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root{
+    --cor-fundo: #000000;
+    --cor-destaque: #22D4FD;
+    --cor-texto: #F6F6F6;
+    --cor-hover:  #272727;
+
+}
+
 *{
     padding:0;
     margin:0;
@@ -9,30 +17,31 @@
 }
 
 body{
-    background-color: black;
-    color: white;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    align-items: center;
+    width: 100%;
 }
 
 .apresentacao{
-    color: #F6F6F6;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    color: var(--cor-texto);
     gap: 4%;
-    padding: 3% 15% 5% 15%;
-
+    display: flex;
+    gap: 70px;
+    padding: 3% 25% 3% 15%;
+    justify-content: center;
 }
 
 .apresentacao_texto{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 593px;
+    width: 50%;
     gap: 40px;
 }
 
 #imagem{
-    height: 550px;
+    height: 50%;
 }
 .apresentacao_links{
     gap: 32px;
@@ -44,22 +53,22 @@ body{
 
 .apresentacao_links_subtitulo{
     font-family: "Krona One", sans-serif;;
-    font-size: 24px;    
+    font-size: 1 rem;    
 }
 
 .titulo{
-    font-size: 36px;
+    font-size: 2.25 rem;
     font-family: "Krona One", sans-serif;;
 }
 
 .paragrafo{
-    font-size: 24px;
+    font-size: 1.5 rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
 }
 
 .destaque_titulo{
-    color: #22D4FD;
+    color: var(--cor-destaque);
 }
 
 .link_apresentacao{
@@ -67,30 +76,31 @@ body{
     justify-content: center;
     gap: 16px;
     align-items: center;
-    border: 2px solid #22D4FD;
+    border: 2px solid var(--cor-destaque);
     font-family: "Montserrat", sans-serif;
-    color: #F6F6F6;
+    color: var(--cor-texto);
     font-weight: 600;
     border-radius: 8px;
-    font-size: 24px;
+    font-size: 1.5 rem;
     padding: 16px 0 16px 0;
-    width: 378px;
+    width: 80%;
     text-decoration: none;
     text-align: center;
 }
 
 .link_apresentacao:hover{
-    background-color: #272727;
+    background-color: var(--cor-hover);
 }
 
 .rodape{
     text-align: center;
     font-family: "Montserrat", sans-serif;
-    font-size: 24px;
+    font-size: 1.5 rem;
     font-weight: 400;
-    background-color: #22D4FD;
-    color: black;
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo);
     padding: 16px;
+    width: 100%;
 }
 
 .cabecalho{
@@ -101,13 +111,37 @@ body{
 }
 
 .cabecalho_link{
-    color: #22D4FD;
+    color: var(--cor-destaque);
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 1.5 rem;
     text-decoration: none;
 }
 
 .cabecalho_link:hover{
     text-decoration: underline;
+}
+
+
+@media (max-width: 1200px) {
+
+    .apresentacao{
+        flex-direction: column-reverse;
+        width: 75%;
+        padding-top: 15%;
+    }
+
+    .imagem{
+        display: flex;
+        justify-content: center;
+    }
+
+    .apresentacao_texto{
+        width: 100%;
+    }
+
+    .link_apresentacao{
+        width: 60%;
+    }
+    
 }
